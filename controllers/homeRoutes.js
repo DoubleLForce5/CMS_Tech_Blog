@@ -28,7 +28,7 @@ router.get('/post/:id', async (req, res) => {
 
     const post = postData.get({ plain: true});
 
-    res.render('project', {
+    res.render('post', {
       ...post,
       logged_in: req.session.logged_in
     });
@@ -42,7 +42,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password']},
-      include:m[{ model: Posts}]
+      include: [{ model: Posts}]
     });
 
     const user = userData.get({ plain: true });
@@ -59,7 +59,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   if(req.session.logged_in) {
-    res.redirect('/profile');
+    res.redirect('/dashboard');
     return;
   }
 
