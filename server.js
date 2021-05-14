@@ -13,14 +13,15 @@ const session = require('express-session');
 // Set up - session storage 
 const SequelizeStore = require('connect-session-sequelize')
 (session.Store)
-
+// add helpers
+const helpers = require('./utils/helpers')
 
 // Set up express app
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Sets up handlebars engine - step 2
-const hbs = exphbs.create({})
+const hbs = exphbs.create({ helpers })
 
 // Set up session 
 const sess = {
