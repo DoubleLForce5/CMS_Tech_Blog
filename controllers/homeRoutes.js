@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     const postsData = await Posts.findAll({
-      include: [{model: User, attributes: ['name']}]
+      include: [{model: User, attributes: ['username']}]
     });
 
     const posts = postsData.map((post) => post.get({plain: true}));
@@ -20,10 +20,10 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/post/:id', async (req, res) => {
+router.get('/posts/:id', withAuth, async (req, res) => {
   try {
     const postData = await Posts.findByPk(req.params.id, {
-      include: [{ model: User, attributes: ['name']}]
+      include: [{ model: User, attributes: ['username']}]
     });
 
     const post = postData.get({ plain: true});
@@ -65,5 +65,10 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+// router.get('/logout', (req, res) => {
+//   if()
+//   res.render('homepage')
+// })
 
 module.exports = router; 
