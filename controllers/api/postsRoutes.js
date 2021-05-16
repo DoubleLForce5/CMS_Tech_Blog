@@ -35,18 +35,18 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
-router.post('/comment', withAuth, async (req, res) => {
-  try {
-    const newComment = await Comment.create({
-      ...req.body,
-      user_id: req.session.user_id
-    });
+// router.post('/comment', withAuth, async (req, res) => {
+//   try {
+//     const newComment = await Comment.create({
+//       ...req.body,
+//       user_id: req.session.user_id
+//     });
 
-    res.status(200).json(newComment)
-  } catch (err) {
-    console.log(err)
-    res.status(400).json(err);
-  }
-});
+//     res.status(200).json(newComment)
+//   } catch (err) {
+//     console.log(err)
+//     res.status(400).json(err);
+//   }
+// });
 
 module.exports = router 
