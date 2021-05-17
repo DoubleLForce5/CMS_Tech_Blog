@@ -2,15 +2,14 @@
 
 const comment = async () => {
   
-
   const comment = document.querySelector('#comment-content').value.trim();
   
   if (comment) {
     console.log('comment front end route')
     console.log(comment);
-    const response = await fetch(`/api/comment/posts`, {
+    const response = await fetch(`/api/posts/comment`, {
       method: 'POST',
-      body: JSON.stringify({ comment }),
+      body: JSON.stringify({ content: comment }),
       headers: { 'Content-Type': 'application/json' }
     });
 
