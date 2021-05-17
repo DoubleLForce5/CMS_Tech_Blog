@@ -2,7 +2,9 @@
   <h2>{{title}}</h2>
   <p>{{content}}</p>
   <p>Created by {{user.username}} on {{format_date date_created}}</p>
-  <form class="form new-post-form" onsubmit="event.preventDefault(); comment();">
+  <form class="form new-post-form" 
+ 
+  >
       <div class="form-group">
         <label for="post-content">Comment:</label>
         <textarea class="form-input" id="comment-content" name="post-content"></textarea>
@@ -11,8 +13,10 @@
         <button id="commentBtn" class="btn btn-primary">Add Comment</button>
       </div>
   </form>
+{{#each comment}}
   <p>
-     {{comment.user.content}}
+     {{comment.user.content}} on {{format_date date_created}}
   </p>
+  {{/each}}
 </div>
 
