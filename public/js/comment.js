@@ -7,14 +7,14 @@ const comment = async () => {
   if (comment) {
     console.log('comment front end route')
     console.log(comment);
-    const response = await fetch(`/api/posts/comment`, {
+    const response = await fetch(`/api/comment`, {
       method: 'POST',
       body: JSON.stringify({ content: comment }),
       headers: { 'Content-Type': 'application/json' }
     });
 
     if (response.ok) {
-      document.location.replace('/posts')
+      document.location.replace('/')
     } else {
       alert('Failed to add comment')
     }
