@@ -1,6 +1,7 @@
 // console.log("comment js linked")
 
-const comment = async () => {
+const comment = async (event) => {
+  // event.preventDefault()
   
   const comment = document.querySelector('#comment-content').value.trim();
   
@@ -14,7 +15,7 @@ const comment = async () => {
     });
 
     if (response.ok) {
-      document.location.replace('/')
+      document.location.replace('/posts')
     } else {
       alert('Failed to add comment')
     }
