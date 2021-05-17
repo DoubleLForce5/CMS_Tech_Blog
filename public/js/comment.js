@@ -16,6 +16,7 @@ const comment = async (event) => {
 
     if (response.ok) {
       // document.location.replace('/posts')
+      document.location.reload()
     } else {
       alert('Failed to add comment')
     }

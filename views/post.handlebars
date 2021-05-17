@@ -13,10 +13,12 @@
         <button id="commentBtn" class="btn btn-primary">Add Comment</button>
       </div>
   </form>
-{{#each comment}}
+{{#each comments}}
   <p>
-     {{content}} on {{format_date date_created}}
+     {{content}} on {{format_date createdAt}} by {{user.username}}
   </p>
   {{/each}}
 </div>
+
+<script src="/js/comment.js"></script>
 

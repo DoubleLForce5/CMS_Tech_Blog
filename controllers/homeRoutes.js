@@ -44,11 +44,15 @@ router.get('/posts/:id', withAuth, async (req, res) => {
   try {
     const postData = await Posts.findByPk(req.params.id, {
       include: [{ model: User, attributes: ['username']}],
-      include: [{ model: Comment, attributes: ['content'] }]
+      include: [{ model: Comment, include: User }]
     });
 
     const post = postData.get({ plain: true});
-
+    let postRequest = {
+      ...post,
+      logged_in: req.session.logged_in
+    }
+    console.log(postRequest)
     res.render('post', {
       ...post,
       logged_in: req.session.logged_in
