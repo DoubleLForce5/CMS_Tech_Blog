@@ -20,9 +20,7 @@ Comment.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-// need this one for sure --- i think 
 Posts.hasMany(Comment, {
-  // this allows it to show in terminal - don't move O! 
   foreignKey: 'user_id'
 });
 
