@@ -3,7 +3,7 @@
 ## Description
 CMS-style blog site where individuals can publish posts, articles, thoughts, and opinions.  
 
-## Deployed site
+## Deployed Site
 https://aqueous-gorge-22961.herokuapp.com/
 
 ## Installation / Usage Instructions
@@ -28,7 +28,7 @@ https://aqueous-gorge-22961.herokuapp.com/
 - Handlebars 
 - Javascript 
 
-## MIT license
+## MIT License
 Copyright (c) 2021 Olivia Lopez
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,5 +49,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Questions:
+## Questions
 Contact me @ https://github.com/DoubleLForce5 and/or lopez.olivia17@outlook.com 
