@@ -20,31 +20,10 @@ router.get('/', async (req, res) => {
   }
 });
 
-// NEW - duplicate code of the one underneath 
-// router.get('/posts', withAuth, async (req, res) => {
-//   try {
-//     const postData = await Posts.findAll({
-//       include: [{ model: Comment, attributes: ['content'] }]
-//     });
-
-//     const post = postData.map((post) => post.get({ plain: true }));
-//     console.log(post)
-//     res.render('post', {
-//       post, 
-//       logged_in: req.session.logged_in
-//     })
-//   } catch(err) {
-//     console.log(err);
-//     res.status(500).json(err);
-//   }
-// })
-// NEW
-
 router.get('/posts/:id', withAuth, async (req, res) => {
   try {
     const postData = await Posts.findByPk(req.params.id, {
-      include: [{ model: User, attributes: ['username']}],
-      include: [{ model: Comment, include: User }]
+      include: [{ model: User, attributes: ['username']}, { model: Comment, include: User }],
     });
 
     const post = postData.get({ plain: true});
