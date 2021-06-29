@@ -11,6 +11,7 @@ const comment = async (event) => {
     const response = await fetch(`/api/comment/posts`, {
       method: 'POST',
       body: JSON.stringify({
+        posts_id: event.target.dataset.id,
         content: comment
       }),
       headers: {
@@ -28,6 +29,7 @@ const comment = async (event) => {
 };
 
 const deleteComment = async (event) => {
+  console.log('hello')
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
@@ -43,10 +45,12 @@ const deleteComment = async (event) => {
   }
 }
 
-document
-  .querySelector('#commentBtn')
-  .addEventListener('click', comment);
 
 document
-.querySelector('#deleteComment')
-.addEventListener('click', deleteComment);
+  .querySelector('#commentForm')
+  .addEventListener('submit', comment);
+
+document
+.querySelectorAll('#deleteButton').forEach((delBtn) => {
+  delBtn.addEventListener('click', deleteComment)
+});
