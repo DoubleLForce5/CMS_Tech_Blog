@@ -3,7 +3,7 @@
 ## Description
 CMS-style blog site where individuals can publish posts, articles, thoughts, and opinions.  
 
-## Deployed Site
+## Deployed site
 https://aqueous-gorge-22961.herokuapp.com/
 
 ## Installation / Usage Instructions
@@ -18,7 +18,7 @@ https://aqueous-gorge-22961.herokuapp.com/
 ![Dashboard](https://user-images.githubusercontent.com/73543476/118703466-bd80fc80-b7db-11eb-85d0-f2286dc4a3c8.png)
 ![Comment Section](https://user-images.githubusercontent.com/73543476/118709439-9548cc00-b7e2-11eb-8e61-febff1a30051.png)
 
-## Tech Used
+## Tech used
 - Mysql
 - Node.js 
 - Dotenv
