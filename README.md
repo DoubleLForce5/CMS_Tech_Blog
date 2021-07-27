@@ -4,7 +4,7 @@
 CMS-style blog site where individuals can publish posts, articles, thoughts, and opinions.  
 
 ## Deployed site
-https://aqueous-gorge-22961.herokuapp.com/
+https://cmstechblog.herokuapp.com/
 
 ## Installation / Usage Instructions
 - To utilize this application you will need Node.js.
