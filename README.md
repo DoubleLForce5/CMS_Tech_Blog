@@ -15,7 +15,7 @@ https://aqueous-gorge-22961.herokuapp.com/
 - Upon completion of the installation mentioned above, type 'npm run watch' into the terminal and hit enter to start the sever. 
 ![Homepage](https://user-images.githubusercontent.com/73543476/118703408-acd08680-b7db-11eb-9bf0-acd6523ec8f1.png)
 ![Login/signup](https://user-images.githubusercontent.com/73543476/118703676-fe791100-b7db-11eb-86df-21ac28765d98.png)
-![Dashboard](https://user-images.githubusercontent.com/73543476/118703466-bd80fc80-b7db-11eb-85d0-f2286dc4a3c8.png)
+<img width="1075" alt="Screen Shot 2021-07-27 at 6 26 32 PM" src="https://user-images.githubusercontent.com/73543476/127240453-62465f58-b6c4-4d15-9fa1-339532ccde5a.png">
 ![Comment Section](https://user-images.githubusercontent.com/73543476/118709439-9548cc00-b7e2-11eb-8e61-febff1a30051.png)
 
 ## Tech used
