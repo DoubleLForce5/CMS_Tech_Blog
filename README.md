@@ -20,6 +20,8 @@ https://cmstechblog.herokuapp.com/
 ![Comment Section](https://user-images.githubusercontent.com/73543476/118709439-9548cc00-b7e2-11eb-8e61-febff1a30051.png)
 
 ## Tech used
+- CSS
+- HTML
 - Mysql
 - Node.js 
 - Dotenv
